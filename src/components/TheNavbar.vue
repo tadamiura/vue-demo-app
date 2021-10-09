@@ -1,8 +1,11 @@
 <template>
     <div id="nav">
-        <div v-for="(viewPath,viewName) in views" :key="viewName">
-            <router-link :to='viewPath'>{{viewName}}</router-link>  |
-        </div>
+        <span 
+        v-for="(viewPath,viewName) in views" :key="viewName"
+        class="nav-element"
+        >
+            <router-link :to='viewPath'>{{viewName}}</router-link>  
+        </span>
     </div>
 </template>
 <script>
@@ -19,3 +22,8 @@ export default {
     },
 }
 </script>
+<style scoped>
+.nav-element {
+    margin: 0 7px;
+}
+</style>
